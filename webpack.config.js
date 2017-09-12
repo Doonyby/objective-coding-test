@@ -14,6 +14,7 @@ export default {
         include: path.join(__dirname, "client"),
         loaders: [ 'babel-loader' ]
       },
+      { test: /\.css$/, loader: ['style-loader', 'css-loader'] },
     ]
   },
   resolve: {

@@ -1,7 +1,7 @@
 {
   "name": "objective-coding-test",
   "version": "1.0.0",
-  "description": "Coding Test Instructions ========================",
+  "description": "Coding Test",
   "main": "index.js",
   "scripts": {
     "server": "nodemon --watch server --exec babel-node -- server/index.js",
@@ -13,6 +13,8 @@
     "babel-cli": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
     "webpack-dev-middleware": "^1.12.0"
   },
