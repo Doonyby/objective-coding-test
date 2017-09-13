@@ -16,14 +16,15 @@ export default class Body extends React.Component {
     let refactorData = () => {
       let refactoredData = [];
       //filter skills into each applicant
-      let getApplicantSkills = (jobObj) => {
-        let job = jobObj;
+      let getApplicantSkills = (newJobObj) => {
+        let job = newJobObj;
         let counter = 0;
-        let getApplicant = jobObj.applicantArr.forEach((item, index) => {
+        let getApplicant = job.applicantArr.forEach((item, index) => {
           let skillFilter = skills.filter((skill) => {
             return item.id == skill.applicant_id;
           })
           job.applicantArr[index].skills = skillFilter;
+          //counted skills and gave the new job object a key/value that tells child size of job rowSpan
           counter = counter + job.applicantArr[index].skills.length;
         })
         job.skillCount = counter;
@@ -38,6 +39,7 @@ export default class Body extends React.Component {
         newJobObj.applicantArr = applicantFilter;
         getApplicantSkills(newJobObj);
       })
+      //set local state to refactored json object
       this.setState({
         data: refactoredData,
       });

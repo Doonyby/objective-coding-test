@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Footer(props) {
+  //count unique skills and display by "Unique Skills"
   let findSkills = () => {
     let uniqueSkills = [];
     let skillNames = props.data.skills.map((item) => {
