@@ -59,4 +59,3 @@ The following is a summary of the data provided.
   * id: integer
   * name: string
   * applicant_id: integer
-
